@@ -43,6 +43,8 @@ export default class Axios {
       config = url
     }
 
+    config = mergeConfig(this.defaults, config)
+
     // Promise链
     const chain: Promisechain<any>[] = [
       {
